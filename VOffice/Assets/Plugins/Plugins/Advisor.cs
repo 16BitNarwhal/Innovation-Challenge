@@ -22,9 +22,9 @@ namespace OpenAI
     {
         [SerializeField] private AudioSource clip2;
         [SerializeField] private Button recordButton;
-        [SerializeField] private Button stopRecordButton;
         [SerializeField] private TextMeshProUGUI finalResponse;
-        [SerializeField] private String t2t;
+        [SerializeField] private Animator animator;
+        private String t2t;
         
         private readonly string fileName = "output.wav";
         private readonly int duration = 7;
@@ -35,21 +35,31 @@ namespace OpenAI
 
         private bool recording = false;
 
-
         void Start(){
             recordButton.GetComponent<Image>().color = Color.green;
-            stopRecordButton.GetComponent<Image>().color = Color.black;
+            if (animator != null) animator.SetBool("talking", false);
         }
 
         private async void polly(string text)
         {
+            var voiceStyle = VoiceId.Amy;
+            if(advisorNumber == 1){
+                voiceStyle = VoiceId.Arthur;
+            } else if(advisorNumber==2){
+                voiceStyle = VoiceId.Matthew;
+            } else if(advisorNumber==3){
+                voiceStyle = VoiceId.Emma;
+            } else if(advisorNumber==4){
+                voiceStyle = VoiceId.Amy;
+            }
             var credentials = new BasicAWSCredentials("AKIARA75K6WI6CI3YFSJ", "i2iGs7JYb67ZT82r+MyCOh48S3D+KpQpu7J9c1Rz");
             var client = new AmazonPollyClient(credentials, RegionEndpoint.USEast1);
+            
             var request = new SynthesizeSpeechRequest()
             {
                 Text = text,
                 Engine = Engine.Neural,
-                VoiceId = VoiceId.Aria,
+                VoiceId = voiceStyle,
                 OutputFormat = OutputFormat.Mp3
             };
             var response = await client.SynthesizeSpeechAsync(request); 
@@ -61,10 +71,12 @@ namespace OpenAI
                 while (!op.isDone) await Task.Yield();
                 clip2.clip = DownloadHandlerAudioClip.GetContent(www);
                 clip2.Play();
-                // check clip2 finished playing
-                while (clip2.isPlaying) {
-                    Debug.Log("Playing...");
-                    await Task.Yield();
+                if (animator != null) {
+                    animator.SetBool("talking", true);
+                    while (clip2.isPlaying) {
+                        await Task.Yield();
+                    }
+                    animator.SetBool("talking", false);
                 }
             }
         }
@@ -84,13 +96,13 @@ namespace OpenAI
         private async void SendReply(string userMessage)
         {
             if(advisorNumber ==1){
-                prompt = "You are a financial advisor.";
+                prompt = "you are a finance advisor. do not mention that you are an ai model. you provide accurate information on how entrepreneurs and business can manage their personal finances and grow financially. my question is:";
             } else if(advisorNumber==2){
-                prompt = "You are an entrepreneurship advisor.";
+                prompt = "you are a marketing advisor. do not mention that you are an ai model. you provide accurate information on how to create marketing campaigns, promote products, and get social media traction. my question is:You are an entrepreneurship advisor.";
             } else if(advisorNumber==3){
-                prompt = "You are a financial advisor.";
+                prompt = "you are a venture capitalist advisor. do not mention that you are an ai model. you provide accurate information on who to raise venture capital, whether or not entrepreneurs should take funding deals, and anything else related to venture capital. my question is:";
             } else if(advisorNumber==4){
-                prompt = "You are a financial advisor.";
+                prompt = "you are a tech advisor. do not mention that you are an ai model. you provide accurate information on how to create software, scale technical systems, and implement technical ideas. my question is:";
             }
             var newMessage = new ChatMessage()
             {

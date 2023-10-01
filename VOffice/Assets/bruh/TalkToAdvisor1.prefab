@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3294575b7e546a1a4c2b4f97263529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip2: {fileID: 3500080110272756372}
   recordButton: {fileID: 0}
   stopRecordButton: {fileID: 0}
   finalResponse: {fileID: 0}
   t2t: 
-  audioSource: {fileID: 3500080110272756372}
   advisorNumber: 1
 --- !u!82 &3500080110272756372
 AudioSource:
