@@ -13,25 +13,8 @@
 ![Issues][issues-shield]
 ![MIT License][license-shield]
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/iankorovinsky/hack-the-north-2023">
-    <img src="logo.jpg" alt="Logo" width="100%" height="100%">
-  </a>
-
-  <p align="center">
-    Say goodbye to déjà vu. 
-    <br />
-  </p>
-
-</div>
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://devpost.com/software/dejavu)
 
 Introducing VOffice, a groundbreaking virtual reality platform designed to revolutionize the way remote teams and entrepreneurs collaborate. With VOffice, you'll step into a dynamic world where distance is no longer a barrier to productivity and innovation. Harnessing the power of cutting-edge VR technology, VOffice offers seamless access to virtual co-working spaces that feel just like the real thing, fostering a sense of camaraderie and shared purpose.
 
@@ -43,20 +26,11 @@ Experience a new era of remote work with VOffice, where collaboration knows no b
 
 Here are the major languages/technologies we used for creating our project:
 
-* [![Next][Next.js]][Next-url]
-* [![Python][Python]][Python-url]
-* [![Google Cloud][Google-Cloud]][Google-Cloud-url]
-* [![OpenCV][OpenCV]][OpenCV-url]
-* [![OpenAI Whisper][OpenAI-Whisper]][OpenAI-Whisper-url]
-* [![SciKit-Learn][SciKit-Learn]][SciKit-Learn-url]
-
-And not to forget, here are some APIs and libraries that we were able to include in the process:
-
-- [Cohere](https://cohere.com/)
-- [PyAudio](https://pypi.org/project/PyAudio/)
-- [Transformers](https://rpradeepmenon.medium.com/introduction-to-large-language-models-and-the-transformer-architecture-534408ed7e61)
-- [Contrastive Language-Image Pretraining: CLIP](https://github.com/openai/CLIP)
-- [MoviePy](https://pypi.org/project/moviepy/)
+* [![Unity][Unity]][Unity-url]
+* [![C#][C#]][C#-url]
+* [![AWS][AWS]][AWS-url]
+* [![Figma][Figma]][Figma-url]
+* [![OpenAI][OpenAI]][OpenAI-url]
 
 <!-- GETTING STARTED -->
 ## Installation (For Developers)
@@ -187,15 +161,13 @@ If you would like to find out more information about our project, feel free to r
 [code-size-shield]:https://img.shields.io/github/languages/code-size/16BitNarwhal/Innovation-Challenge.svg?style=for-the-badge
 [tests-passing-shield]: https://img.shields.io/github/actions/workflow/status/:user/Innovation-Challenge.svg?style=for-the-badge
 [product-screenshot]: interface.png
-[Next.js]: https://img.shields.io/badge/next.js-808080?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[Python]: https://img.shields.io/badge/python-FF0000?style=for-the-badge&logo=python&logoColor=white
-[Python-url]:https://www.python.org/
-[Google-Cloud]:https://img.shields.io/badge/google_cloud-008000?style=for-the-badge&logo=googlecloud&logoColor=white
-[Google-Cloud-url]:https://cloud.google.com/
-[OpenCV]:https://img.shields.io/badge/opencv-0000FF?style=for-the-badge&logo=opencv&logoColor=white
-[OpenCV-url]:https://opencv.org/
-[OpenAI-Whisper]:https://img.shields.io/badge/openai_whisper-000000?style=for-the-badge&logo=openai&logoColor=white
-[OpenAI-Whisper-url]:https://openai.com/research/whisper
-[SciKit-Learn]:https://img.shields.io/badge/scikit_learn-FFC0CB?style=for-the-badge&logo=scikitlearn&logoColor=black
-[SciKit-Learn-url]:https://scikit-learn.org/ 
+[Unity]: https://img.shields.io/badge/unity-808080?style=for-the-badge&logo=unity&logoColor=white
+[Unity-url]:https://unity.com/
+[C#]: https://img.shields.io/badge/csharp-FF0000?style=for-the-badge&logo=csharp&logoColor=white
+[C#-url]:https://learn.microsoft.com/en-us/dotnet/csharp/
+[AWS]:https://img.shields.io/badge/aws-008000?style=for-the-badge&logo=googlecloud&logoColor=white
+[AWS-url]:https://aws.amazon.com/
+[Figma]:https://img.shields.io/badge/figma-0000FF?style=for-the-badge&logo=figma&logoColor=white
+[Figma-url]:https://www.figma.com/
+[OpenAI]:https://img.shields.io/badge/openai-000000?style=for-the-badge&logo=openai&logoColor=white
+[OpenAI-url]:https://openai.com/
