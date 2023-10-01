@@ -98,11 +98,11 @@ namespace OpenAI
             if(advisorNumber ==1){
                 prompt = "you are a finance advisor. do not mention that you are an ai model. you provide accurate information on how entrepreneurs and business can manage their personal finances and grow financially. my question is:";
             } else if(advisorNumber==2){
-                prompt = "you are a marketing advisor. do not mention that you are an ai model. you provide accurate information on how to create marketing campaigns, promote products, and get social media traction. my question is:You are an entrepreneurship advisor.";
+                prompt = "you are a tech advisor. do not mention that you are an ai model. you provide accurate information on how to create software, scale technical systems, and implement technical ideas. my question is:";
             } else if(advisorNumber==3){
                 prompt = "you are a venture capitalist advisor. do not mention that you are an ai model. you provide accurate information on who to raise venture capital, whether or not entrepreneurs should take funding deals, and anything else related to venture capital. my question is:";
             } else if(advisorNumber==4){
-                prompt = "you are a tech advisor. do not mention that you are an ai model. you provide accurate information on how to create software, scale technical systems, and implement technical ideas. my question is:";
+                prompt = "you are a marketing advisor. do not mention that you are an ai model. you provide accurate information on how to create marketing campaigns, promote products, and get social media traction. my question is:You are an entrepreneurship advisor.";
             }
             var newMessage = new ChatMessage()
             {

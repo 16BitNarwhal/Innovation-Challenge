@@ -29,7 +29,7 @@ public class Pen : MonoBehaviour
         tipMaterial.color = penColors[currentColorIndex];
     }
 
-    float prevColor = 0; // horrible naming conventions I know, but I'm running at 9AM on 2 hours of sleep
+    float prevColor = 0; // horrible naming conventions I know, but I'm running on 2 hours of sleep
     // I have school tmrw pray for me plsss
     private void Update()
     {
@@ -71,7 +71,7 @@ public class Pen : MonoBehaviour
                 index++;
                 currentDrawing.positionCount = index + 1;
                 currentDrawing.SetPosition(index, tip.position);
-                Debug.Log(tip.position);
+                // Debug.Log(tip.position);
             }
         }
     }
